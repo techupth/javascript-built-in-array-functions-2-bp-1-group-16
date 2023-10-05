@@ -375,4 +375,22 @@ const bills = [
 
 // Start coding here
 
-const newBills;
+//const newBills;
+let newBills;  //use let instead
+
+newBills = bills.filter(bill => bill.member !== null);
+
+console.log(newBills);
+
+/*จาก Exercise #1 สังเกตได้ว่าใน Array bills 
+จะมี Object รายการสั่งซื้อบางตัวที่  member มีค่าเป็น null
+
+ให้ Declare ตัว Variable newBills 
+โดยมี Value เป็น Array ที่เก็บ Object 
+รายการสั่งซื้อที่ Property  member มี Value ที่ไม่ใช่ null 
+โดยใช้ Built-in Array Function
+เมื่อทำการแสดงผลค่าของ newBills 
+ออกมาดูทางหน้าจอด้วย console.log() 
+ให้สังเกตว่า Object ของ Array newBills 
+จะไม่มี Property member ตัวไหนมี Value เป็น null
+*/

@@ -375,4 +375,18 @@ const bills = [
 
 // Start coding here
 
-const totalPaidByLocation;
+//const totalPaidByLocation;
+
+let totalPaidByLocation = bills.reduce((acc, bill) => {
+    let location = bill.location;  
+    if (!acc[location]){      //อย่าลืมใช้เป็น acc  และ ใช้ [] ไม่ใช่ .
+        acc[location] = bill.total;  //ตอนบวกต้องใช้ bill
+    } else {
+        acc[location] += bill.total;  //ตอนบวกต้องใช้ bill
+    }
+    return acc;  //อย่าลืม return
+},{})
+
+console.log(totalPaidByLocation);
+
+//console.log(totalPaidByLocation['Lopburi']);

@@ -2,6 +2,8 @@ let crimeRecordNames = ["Theodora Milenko", "Tinashe Benigno", "Mahalia Priyanka
 
 function searchCrimeRecord(name) {
   // Start coding here
+  let isCriminal = (crimeRecordNames.filter(person => person === name)).length > 0;
+  return isCriminal === true ? `${name} has a crime record !!!` : `${name} has no crime record.`
 }
 
 //ผลลัพธ์ที่ควรได้จาก Example case
